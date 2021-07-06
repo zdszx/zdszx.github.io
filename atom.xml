@@ -1,36 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>Hexo</title>
+  <title>zdszx&#39;s blog</title>
   
-  
+  <subtitle>Hello</subtitle>
   <link href="/atom.xml" rel="self"/>
   
-  <link href="http://example.com/"/>
-  <updated>2021-07-01T13:30:55.117Z</updated>
-  <id>http://example.com/</id>
-  
-  <author>
-    <name>John Doe</name>
-    
-  </author>
+  <link href="http://zdszx.github.io/"/>
+  <updated>2021-07-03T07:04:58.224Z</updated>
+  <id>http://zdszx.github.io/</id>
   
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>Hello World</title>
-    <link href="http://example.com/2021/07/01/hello-world/"/>
-    <id>http://example.com/2021/07/01/hello-world/</id>
-    <published>2021-07-01T13:30:55.117Z</published>
-    <updated>2021-07-01T13:30:55.117Z</updated>
-    
-    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>]]></content>
+    <title>a</title>
+    <link href="http://zdszx.github.io/2021/07/03/a/"/>
+    <id>http://zdszx.github.io/2021/07/03/a/</id>
+    <published>2021-07-03T07:04:58.000Z</published>
+    <updated>2021-07-03T07:04:58.224Z</updated>
     
     <summary type="html">
-    
-      
-      
-        &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.io/docs/&quot;&gt;documentation&lt;/a&gt; for
-      
     
     </summary>
     
@@ -39,25 +27,25 @@
   
   <entry>
     <title>在这里</title>
-    <link href="http://example.com/2018/08/02/hello_world/"/>
-    <id>http://example.com/2018/08/02/hello_world/</id>
-    <published>2018-08-02T03:41:10.000Z</published>
-    <updated>2021-07-01T14:17:43.313Z</updated>
+    <link href="http://zdszx.github.io/2021/07/02/hello_world/"/>
+    <id>http://zdszx.github.io/2021/07/02/hello_world/</id>
+    <published>2021-07-02T03:41:10.000Z</published>
+    <updated>2021-07-03T07:29:01.915Z</updated>
     
-    <content type="html"><![CDATA[<p>javascript是一门充满活力、简单易用的语言，又是一门具有许多复杂微妙技术的语言。即使是经验丰富的javascript开发者，如果没有认真学习的话，也无法真正理解它们，这就是javascript的矛盾之处。由于javascript不必理解就可以使用，因此通常来说很难真正理解语言本身，这就是我们面临的挑战。不满足于只是让代码正常工作，而是想要弄清楚为什么，勇于挑战这条崎岖颠簸的少有人走的路，拥抱整个javascript<br><span id="more"></span><br>后面的内容在首页不显示，只显示到<!--more-->这里</p>]]></content>
+    <content type="html"><![CDATA[<p>javascrip是一充满活力、简单易用的语言，又是一门具有许多复杂微妙技术的语言。即使是经验丰富的javascript开发者，如果没有认真学习的话，也无法真正理解它们，这就是javascript的矛盾之处。由于javascript不必理解就可以使用，因此通常来说很难真正理解语言本身，这就是我们面临的挑战。不满足于只是让代码正常工作，而是想要弄清楚为什么，勇于挑战这条崎岖颠簸的少有人走的路，拥抱整个javascript<br><img src="/img/HyperbolicAnimation.gif" alt="加载没(⊙o⊙)？"><br><span id="more"></span><br>后面的内容在首页不显示，只显示到<!--more-->这里</p>]]></content>
     
     <summary type="html">
     
-      &lt;p&gt;javascript是一门充满活力、简单易用的语言，又是一门具有许多复杂微妙技术的语言。即使是经验丰富的javascript开发者，如果没有认真学习的话，也无法真正理解它们，这就是javascript的矛盾之处。由于javascript不必理解就可以使用，因此通常来说很难真正理解语言本身，这就是我们面临的挑战。不满足于只是让代码正常工作，而是想要弄清楚为什么，勇于挑战这条崎岖颠簸的少有人走的路，拥抱整个javascript&lt;br&gt;
+      &lt;p&gt;javascrip是一充满活力、简单易用的语言，又是一门具有许多复杂微妙技术的语言。即使是经验丰富的javascript开发者，如果没有认真学习的话，也无法真正理解它们，这就是javascript的矛盾之处。由于javascript不必理解就可以使用，因此通常来说很难真正理解语言本身，这就是我们面临的挑战。不满足于只是让代码正常工作，而是想要弄清楚为什么，勇于挑战这条崎岖颠簸的少有人走的路，拥抱整个javascript&lt;br&gt;&lt;img src=&quot;/img/HyperbolicAnimation.gif&quot; alt=&quot;加载没(⊙o⊙)？&quot;&gt;&lt;br&gt;
     
     </summary>
     
-      <category term="web前端" scheme="http://example.com/categories/web%E5%89%8D%E7%AB%AF/"/>
+      <category term="web前端" scheme="http://zdszx.github.io/categories/web%E5%89%8D%E7%AB%AF/"/>
     
     
-      <category term="博客" scheme="http://example.com/tags/%E5%8D%9A%E5%AE%A2/"/>
+      <category term="博客" scheme="http://zdszx.github.io/tags/%E5%8D%9A%E5%AE%A2/"/>
     
-      <category term="hexo" scheme="http://example.com/tags/hexo/"/>
+      <category term="hexo" scheme="http://zdszx.github.io/tags/hexo/"/>
     
   </entry>
   
