@@ -2,6 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://zdszx.github.io/2021/07/02/hello_world/</loc>
+    
+    <lastmod>2021-07-07T12:59:29.133Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://zdszx.github.io/2021/07/03/H264/</loc>
+    
+    <lastmod>2021-07-07T12:56:57.360Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://zdszx.github.io/2021/07/02/lxd/</loc>
     
     <lastmod>2021-07-06T12:13:56.678Z</lastmod>
@@ -40,20 +54,6 @@
     <loc>http://zdszx.github.io/categories/index.html</loc>
     
     <lastmod>2021-07-03T08:12:23.604Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://zdszx.github.io/2021/07/02/hello_world/</loc>
-    
-    <lastmod>2021-07-03T07:29:01.915Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://zdszx.github.io/2021/07/03/a/</loc>
-    
-    <lastmod>2021-07-03T07:04:58.224Z</lastmod>
     
   </url>
   
