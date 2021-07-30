@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="H.264简介, zdszx&#39;s blog">
+    <meta name="keywords" content="Python3, zdszx&#39;s blog">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>H.264简介 | zdszx&#39;s blog</title>
+    <title>Python3 | zdszx&#39;s blog</title>
     <link rel="icon" type="image/jpeg" href="/favicon.jpg">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -310,12 +310,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/5.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/7.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">H.264简介</h1>
+                    <h1 class="description center-align post-title">Python3</h1>
                 </div>
             </div>
         </div>
@@ -431,8 +431,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/H264/">
-                                <span class="chip bg-color">H264</span>
+                            <a href="/tags/python/">
+                                <span class="chip bg-color">python</span>
                             </a>
                         
                     </div>
@@ -443,8 +443,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/%E9%9F%B3%E8%A7%86%E9%A2%91/" class="post-category">
-                                音视频
+                            <a href="/categories/python/" class="post-category">
+                                python
                             </a>
                         
                     </div>
@@ -456,7 +456,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-07-03
+                    2021-07-25
                 </div>
                 
 
@@ -477,41 +477,35 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>1.H.264简介</p>
-<p>1.1 H.264标准概述</p>
-<p>H.264也称为高级视频编码MPEG-4 AVC或MPEG-4 Part 10。视频编码属于后处理技术，因为从摄像机采集出来的数据十分庞大，不适合网络传输和存储，故需要对视频进行编码压缩，以达到低码率、高成像质量的目的。H.264文件是视频编解码器标准文件，以其压缩效率方面的优势和足够的灵活性而广为应用，到目前为止，它是视频内容的记录，压缩和分发的最常用格式，截至2019年9月，已有91％的视频行业开发人员使用了该格式。它支持高达8K的分辨率[1]。H264标准的卓越之处在于其宏块变体，以前的标准只能单独使用块4×4、8×8和16×16切分图像作帧间帧内编码，但是H264标准能使用多种不同的块大小。除此之外目前，该标准还应用于物联网[2]。</p>
-<p>H264视频编码标准包含的编码算法[3]：</p>
-<p>1) 帧间帧内预测，帧间即为多参考帧的时域数据压缩，帧内即为变尺寸块的空域数据</p>
-<p>压缩[4]；</p>
-<p>2) 变换编码，为了减少混叠并锐化图像，将空间域的图像信号变换到变换域或频率域的正交矢量空间中，用数字滤波器产生像素的亮度分量预测值，服务于帧间运动检测与图像质量呈现 [5]；</p>
-<p>3) 熵编码，图像声音信号均为随机信号序列，故可以利用信息论原理减少数据冗余，主要有CABAC上下文自适应二进制算术编码,CAVLC上下文自适应二进制算术编码[6]；</p>
-<p>4) 使用一个网络抽像层（NAL），进一步封装编码后的视频码流，使得相同的视频语法</p>
-<p>可以适用于多种网络环境中。</p>
-<p>1.2 H.264编码原理介绍</p>
-<p>1.2.1 H.264编码方案总览</p>
-<p>目标：1) 获得高视频压缩比；2) 具有良好的网络亲和性。对此，使用的解决方案为:</p>
-<p>1) VLC 视频编码层；2) NAL 网络抽象层。</p>
-<p>H.264字节流由 NALU（NAL Unit）组成，并且每个NALU可以被分类为VCL或非VCL。</p>
-<p>1.2.2 VLC层和NAL层关系</p>
-<p>VLC层是对核心算法引擎，块，宏块及片语法级别的定义，它输出由MPEG Part 10定义的H.264编码完的原始数据SODB(数据比特串)。原始字节序列有效负载（RBSP）是一种语法结构，包含封装在NAL单元中的整数个字节。如图1所示，在获得SODB之后，将添加等于1的尾随比特以指示SODB的末尾，该比特称为RBSP Stop bit，此外，RBSP始终按字节对齐，并且在停止位之后添加0位以变为8位对齐[7]。</p>
-<p><img src="https://pic3.zhimg.com/80/v2-977ce4e56fef619bb8da4a1e6acb3bda_1440w.jpg" alt="img"></p>
-<p>SODB_RBSP_EBSP_NALU关系</p>
-<p>NAL层定义了片级以上的语法级别，比如针对于网络传输的序列参数集SPS和图像参数集PPS等。如图1所示，NAL层将SODB打包成RBSP，并且为了唯一保证起始码简化解码过程，会在RBSP尾零之后添加0x03，最后加上NAL头，就完成了一个NAL单元。</p>
-<p>1.2.3 NAL Unit类型</p>
-<p>进一步说，在H.264标准协议中规定了多种不同的NALU类型，其中两个极为重要的类型是SPS和PPS。 如图2所示，类型7就表示该个NALU内保存的数据为序列参数集Sequence Paramater Set(SPS),类型8表示该个NALU内保存的数据为图像参数集Picture Paramater Set(PPS)。通常情况下，PPS类似于SPS，在H.264的裸码流中单独保存在一个NAL Unit中。SPS中保存了一组编码视频序列Coded video sequence的全局参数 [8]。所谓的编码视频序列即原始视频的一帧一帧的像素数据经过编码之后的结构组成的序列，每一帧的编码后数据所依赖的参数保存于图像参数集（PPS）中[9]。SPS和PPS类型的NALU一般位于整个码流的起始位置，如果其中的数据丢失或出现错误，那么解码过程很可能会失败。</p>
-<p><img src="/img/NALU.jpg" alt="img"></p>
-<p>图2： NAL单元类型</p>
-<p><strong>参考文献</strong></p>
-<p>[1] Bitmovin. Video Develpler Report 2019．<a href="https://link.zhihu.com/?target=https%3A//go.bitmovin.com/video-developer-report-2019">Video Developer Report 2019</a></p>
-<p>[2]A.Nurrohman and M. Abdurohman, “High Performance Streaming Based on H264 and Real Time Messaging Protocol (RTMP),” 2018 6th International Conference on Information and Communication Technology (ICoICT), Bandung, 2018, pp. 174-177.</p>
-<p>[3] Grecos,C., Mingyuan Yang, A framework for fast mode decision in the H264 video coding standard,Digital Signal Processing, 2007,17(3):652-664.</p>
-<p>[4] 代路伟,罗家融.H．264解码器中帧内预测模块的硬件设计[J].网络新媒体技术,2016(2):30-35.</p>
-<p>[5] N.Belhadj, N. Bahri, M. Ali Ben Ayed, Z. Marrakchi and H. Mehrez, “Data level parallelism for H264/AVC baseline intra-prediction chain on MPSoC,” 10th International Multi-Conferences on Systems, Signals &amp; Devices 2013 (SSD13), Hammamet, 2013, pp. 1-4.</p>
-<p>[6]何俊,田应洪,洪志良.基于H．264的熵编码结构[J].计算机工程,2008,34(6):229-232.</p>
-<p>[7] Yumin Chan. Introduction to H.264:SODB vs RBSP vs EBSP &amp; NAL Unit.</p>
-<p><a href="https://link.zhihu.com/?target=https%3A//yumichan.net/video-processing/video-compression">https://yumichan.net/video-processing/video-compression</a></p>
-<p>[8] Jungheum Park, Sangjin Lee,Data fragment forensics for embedded DVR systems</p>
-<p>Digital Investigation,Volume 11, Issue 3,2014,Pages 187-200</p>
+                <h3 id="Python元类"><a href="#Python元类" class="headerlink" title="Python元类"></a>Python元类</h3><p>Python中的所有内容都可以定义为具有属性和方法的对象。</p>
+<p><img src="/img/metaclass1.png" alt="metaclass"> </p>
+<p>一个简单的类在声明时没有分配任何内存，它是在创建一个类的实例时发生的。</p>
+<p>通过创建的对象，可以访问该类。该类仅用作模板。对象的属性本质上意味着我们可以在运行时与它进行交互，传递诸如变量之类的参数，进行存储，修改，也可以与它进行交互。</p>
+<p><img src="/img/metaclass2.png" alt="metaclass"> </p>
+<p>Python是一种动态编程语言，并允许在运行时创建类。与C ++等其他语言不同，后者仅允许在编译时创建类。在灵活性方面，Python优于其他静态类型的语言。</p>
+<p>可以通过两种方法创建元类：1.类型类;  2. 自定义元类:  </p>
+<p>2.1 <strong>new </strong>（）：当用户要在类创建之前定义元组字典时使用。它返回一个类的实例，并且很容易覆盖/管理对象流</p>
+<p>2.2 <strong>init </strong>（）：在创建对象并对其进行初始化之后调用它;</p>
+<h3 id="Python静态方法和类方法的区别"><a href="#Python静态方法和类方法的区别" class="headerlink" title="Python静态方法和类方法的区别"></a>Python静态方法和类方法的区别</h3><p>类方法和静态方法的区别在于，Python会自动绑定类方法的第一个参数，类方法的第一个参数（通常建议参数名为 cls）会自动绑定到类本身；但对于静态方法则不会自动绑定。</p>
+<p>类方法采用装饰器@classmethod来定义</p>
+<p>静态方法使用装饰器@staticmethod来定义一个静态方法。</p>
+<h3 id="py字典底层设计"><a href="#py字典底层设计" class="headerlink" title="py字典底层设计"></a>py字典底层设计</h3><p>字典是通过散列表或说哈希表实现的</p>
+<p>其本质是一个多对一的映射，这也就引出了下面一个概念–哈希冲突或者说哈希碰撞</p>
+<p>常见的哈希碰撞解决方法：</p>
+<p>1 开放寻址法（open addressing）</p>
+<p>2 再哈希法</p>
+<p>3 链地址法</p>
+<p>4 公共溢出区</p>
+<p>5 装填因子α</p>
+<h3 id="set的底层数据结构是什么？set和dict的区别"><a href="#set的底层数据结构是什么？set和dict的区别" class="headerlink" title="set的底层数据结构是什么？set和dict的区别"></a>set的底层数据结构是什么？set和dict的区别</h3><p>（1）dict是用来存储键值对结构的数据的，set其实也是存储的键值对，只是默认键和值是相同的。Python中的dict和set都是通过散列表来实现的。</p>
+<p>（2）dict中的数据是无序存放的,操作的时间复杂度，插入、查找和删除都可以在O(1)的时间复杂度键的限制，只有可哈希的对象才能作为字典的键和set的值。可hash的对象即python中的不可变对象和自定义的对象。可变对象(列表、字典、集合)是不能作为dict的键和set的值的。与list相比：list的查找和删除的时间复杂度是O(n)，添加的时间复杂度是O(1)。但是dict使用hashtable内存的开销更大。为了保证较少的冲突，hashtable的装载因子，一般要小于0.75，在python中当装载因子达到2/3的时候就会自动进行扩容</p>
+<h3 id="list和tuple的底层数据结构是什么？"><a href="#list和tuple的底层数据结构是什么？" class="headerlink" title="list和tuple的底层数据结构是什么？"></a>list和tuple的底层数据结构是什么？</h3><p>python的list和tuple，均采用了顺序表的结构。Tuple不支持改变内部状态的操作。（1）顺序表：将表元素直接顺序的放在一块划分的连续存储区内，所以元素的顺序关系由存储顺序自然表示。链接表：将表元素放在通过链接构造起来的系列存储块里。两种模型各有长短。插入和删除的时间复杂度为O(n)，增加的时间复杂度为O(1)<br>（2）在存储dict的时候，首先会根据dict的key进行hash映射到对应的表元，然后再对应的表元中开辟内存，存入数据，当如果存在不同的两个key的hash结果相同的时候，就会使用散列值的另一部分来定位散列表中的另一行。在查找指定key时，会先计算key的散列值，然后使用散列值的一部分来定位表元，如果没有找到相应的表元，则说明dict中不存在对应的key跑出KeyError异常。如果找到表元之后，会判断表元中的key是否和要查找的key相等，相等就返回对应值，如果不相等则使用其对应的散列值的其他部分来定位散列表中的其他行。</p>
+<h4 id="py上下文管理器设计"><a href="#py上下文管理器设计" class="headerlink" title="py上下文管理器设计"></a>py上下文管理器设计</h4><p>上下文管理器，能够帮助你自动分配并且释放资源，其中最典型的应用便是 with 语句</p>
+<h4 id="如何去实现一个迭代器的功能？"><a href="#如何去实现一个迭代器的功能？" class="headerlink" title="如何去实现一个迭代器的功能？"></a>如何去实现一个迭代器的功能？</h4><p>答：实现一个迭代器，只需要实现_next__方法就行了。如果实现一个可迭代对象，实现<strong>iter</strong>方法就可以了。</p>
+<h4 id="yield和yield-from有何区别？"><a href="#yield和yield-from有何区别？" class="headerlink" title="yield和yield from有何区别？"></a>yield和yield from有何区别？</h4><p>yield是直接返回值，yield from调用子生成器进行迭代那个可迭代对象。比如yield一个列表，那么next(g）就是整个列表，而如果yield from 列表，next(g)得到的就是一个子元素</p>
+<h4 id="py深浅复制"><a href="#py深浅复制" class="headerlink" title="py深浅复制"></a>py深浅复制</h4><p>在修改时不想修改原对象，那么可以用深拷贝弄一个新的内存对象采用</p>
+<h4 id="python多继承的顺序"><a href="#python多继承的顺序" class="headerlink" title="python多继承的顺序"></a>python多继承的顺序</h4><p>自下而上，自左而右。</p>
+<p><img src="/img/xkcd/interest_timescales.png" alt="尺度!?"> </p>
 
                 
             </div>
@@ -538,7 +532,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://zdszx.github.io/2021/07/03/H264/">http://zdszx.github.io/2021/07/03/H264/</a>
+                    <a href="http://zdszx.github.io/2021/07/25/Python/">http://zdszx.github.io/2021/07/25/Python/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -576,8 +570,8 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/H264/">
-                                    <span class="chip bg-color">H264</span>
+                                <a href="/tags/python/">
+                                    <span class="chip bg-color">python</span>
                                 </a>
                             
                         </div>
@@ -620,9 +614,10 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
                 <a href="/2021/07/25/Python/">
                     <div class="card-image">
@@ -640,9 +635,9 @@
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-07-25
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-07-25
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -655,6 +650,7 @@
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -673,31 +669,31 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2021/07/02/hello_world/">
+                <a href="/2021/07/03/H264/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/13.jpg" class="responsive-img" alt="流媒体传输协议RTP与视频H264编码格式">
+                        <img src="/medias/featureimages/5.jpg" class="responsive-img" alt="H.264简介">
                         
-                        <span class="card-title">流媒体传输协议RTP与视频H264编码格式</span>
+                        <span class="card-title">H.264简介</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            流媒体传输协议RTP与视频H264编码格式RTP，即real-time transport protocol（实时传输协议），为实时传输交互的音频和视频提供了端到端传输服务,应用层协议。
+                            
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-07-02
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-07-03
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/web%E5%89%8D%E7%AB%AF/" class="post-category">
-                                    web前端
+                            <a href="/categories/%E9%9F%B3%E8%A7%86%E9%A2%91/" class="post-category">
+                                    音视频
                                 </a>
                             
                             
@@ -707,8 +703,8 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E6%B5%81%E5%AA%92%E4%BD%93%E4%BC%A0%E8%BE%93/">
-                        <span class="chip bg-color">流媒体传输</span>
+                    <a href="/tags/H264/">
+                        <span class="chip bg-color">H264</span>
                     </a>
                     
                 </div>
