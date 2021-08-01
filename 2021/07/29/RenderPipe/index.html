@@ -431,8 +431,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/python/">
-                                <span class="chip bg-color">python</span>
+                            <a href="/tags/DX11-pipeline/">
+                                <span class="chip bg-color">DX11 pipeline</span>
                             </a>
                         
                     </div>
@@ -443,8 +443,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/python/" class="post-category">
-                                python
+                            <a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9B%BE%E5%BD%A2%E5%AD%A6/" class="post-category">
+                                计算机图形学
                             </a>
                         
                     </div>
@@ -456,7 +456,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-07-25
+                    2021-07-29
                 </div>
                 
 
@@ -477,34 +477,28 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h3 id="Python元类"><a href="#Python元类" class="headerlink" title="Python元类"></a>Python元类</h3><p>Python中的所有内容都可以定义为具有属性和方法的对象。</p>
-<p><img src="/img/metaclass1.png" alt="metaclass"> </p>
-<p>一个简单的类在声明时没有分配任何内存，它是在创建一个类的实例时发生的。</p>
-<p>通过创建的对象，可以访问该类。该类仅用作模板。对象的属性本质上意味着我们可以在运行时与它进行交互，传递诸如变量之类的参数，进行存储，修改，也可以与它进行交互。</p>
-<p><img src="/img/metaclass2.png" alt="metaclass"> </p>
-<p>Python是一种动态编程语言，并允许在运行时创建类。与C ++等其他语言不同，后者仅允许在编译时创建类。在灵活性方面，Python优于其他静态类型的语言。</p>
-<p>可以通过两种方法创建元类：1.类型类;  2. 自定义元类:  </p>
-<p>2.1 <strong>new </strong>（）：当用户要在类创建之前定义元组字典时使用。它返回一个类的实例，并且很容易覆盖/管理对象流</p>
-<p>2.2 <strong>init </strong>（）：在创建对象并对其进行初始化之后调用它;</p>
-<h3 id="Python静态方法和类方法的区别"><a href="#Python静态方法和类方法的区别" class="headerlink" title="Python静态方法和类方法的区别"></a>Python静态方法和类方法的区别</h3><p>类方法和静态方法的区别在于，Python会自动绑定类方法的第一个参数，类方法的第一个参数（通常建议参数名为 cls）会自动绑定到类本身；但对于静态方法则不会自动绑定。</p>
-<p>类方法采用装饰器@classmethod来定义</p>
-<p>静态方法使用装饰器@staticmethod来定义一个静态方法。</p>
-<h3 id="py字典底层设计"><a href="#py字典底层设计" class="headerlink" title="py字典底层设计"></a>py字典底层设计</h3><p>字典是通过散列表或说哈希表实现的</p>
-<p>其本质是一个多对一的映射，这也就引出了下面一个概念–哈希冲突或者说哈希碰撞</p>
-<p>常见的哈希碰撞解决方法：</p>
-<p>1 开放寻址法（open addressing）</p>
-<p>2 再哈希法</p>
-<p>3 链地址法</p>
-<p>4 公共溢出区</p>
-<p>5 装填因子α</p>
-<h3 id="set的底层数据结构是什么？set和dict的区别"><a href="#set的底层数据结构是什么？set和dict的区别" class="headerlink" title="set的底层数据结构是什么？set和dict的区别"></a>set的底层数据结构是什么？set和dict的区别</h3><p>（1）dict是用来存储键值对结构的数据的，set其实也是存储的键值对，只是默认键和值是相同的。Python中的dict和set都是通过散列表来实现的。</p>
-<p>（2）dict中的数据是无序存放的,操作的时间复杂度，插入、查找和删除都可以在O(1)的时间复杂度键的限制，只有可哈希的对象才能作为字典的键和set的值。可hash的对象即python中的不可变对象和自定义的对象。可变对象(列表、字典、集合)是不能作为dict的键和set的值的。与list相比：list的查找和删除的时间复杂度是O(n)，添加的时间复杂度是O(1)。但是dict使用hashtable内存的开销更大。为了保证较少的冲突，hashtable的装载因子，一般要小于0.75，在python中当装载因子达到2/3的时候就会自动进行扩容</p>
-<h3 id="list和tuple的底层数据结构是什么？"><a href="#list和tuple的底层数据结构是什么？" class="headerlink" title="list和tuple的底层数据结构是什么？"></a>list和tuple的底层数据结构是什么？</h3><p>python的list和tuple，均采用了顺序表的结构。Tuple不支持改变内部状态的操作。（1）顺序表：将表元素直接顺序的放在一块划分的连续存储区内，所以元素的顺序关系由存储顺序自然表示。链接表：将表元素放在通过链接构造起来的系列存储块里。两种模型各有长短。插入和删除的时间复杂度为O(n)，增加的时间复杂度为O(1)<br>（2）在存储dict的时候，首先会根据dict的key进行hash映射到对应的表元，然后再对应的表元中开辟内存，存入数据，当如果存在不同的两个key的hash结果相同的时候，就会使用散列值的另一部分来定位散列表中的另一行。在查找指定key时，会先计算key的散列值，然后使用散列值的一部分来定位表元，如果没有找到相应的表元，则说明dict中不存在对应的key跑出KeyError异常。如果找到表元之后，会判断表元中的key是否和要查找的key相等，相等就返回对应值，如果不相等则使用其对应的散列值的其他部分来定位散列表中的其他行。</p>
-<h4 id="py上下文管理器设计"><a href="#py上下文管理器设计" class="headerlink" title="py上下文管理器设计"></a>py上下文管理器设计</h4><p>上下文管理器，能够帮助你自动分配并且释放资源，其中最典型的应用便是 with 语句</p>
-<h4 id="如何去实现一个迭代器的功能？"><a href="#如何去实现一个迭代器的功能？" class="headerlink" title="如何去实现一个迭代器的功能？"></a>如何去实现一个迭代器的功能？</h4><p>答：实现一个迭代器，只需要实现_next__方法就行了。如果实现一个可迭代对象，实现<strong>iter</strong>方法就可以了。</p>
-<h4 id="yield和yield-from有何区别？"><a href="#yield和yield-from有何区别？" class="headerlink" title="yield和yield from有何区别？"></a>yield和yield from有何区别？</h4><p>yield是直接返回值，yield from调用子生成器进行迭代那个可迭代对象。比如yield一个列表，那么next(g）就是整个列表，而如果yield from 列表，next(g)得到的就是一个子元素</p>
-<h4 id="py深浅复制"><a href="#py深浅复制" class="headerlink" title="py深浅复制"></a>py深浅复制</h4><p>在修改时不想修改原对象，那么可以用深拷贝弄一个新的内存对象采用</p>
-<h4 id="python多继承的顺序"><a href="#python多继承的顺序" class="headerlink" title="python多继承的顺序"></a>python多继承的顺序</h4><p>自下而上，自左而右。</p>
+                <h1 id="渲染流水线（-rendering-pipeline）"><a href="#渲染流水线（-rendering-pipeline）" class="headerlink" title="渲染流水线（ rendering pipeline）"></a>渲染流水线（ rendering pipeline）</h1><p>如果给出一台具有确定位置和朝向的虚拟摄像机（ virtual camera）以及某个3D场景的几何描述，那么渲染流水线则是以此虚拟摄像机为视角进行观察，并据此生成给定3D场景2D图像的一整套处理步骤。</p>
+<p>渲染流水线可以划分为输入装配（ Input Assembly，IA）阶段、顶点着色器（ Vertex Shader，vs）阶段、曲面细分（ tessellation）阶段、几何着色器（ Geometry Shader，Gs）阶段、裁剪阶段、光栅化（ Rasterization Shader，RS）阶段、像素着色器（ Pixel shader，PS）阶段以及输出合并（ Output Merge OM）等重要阶段</p>
+<!--把渲染流水线想象为一个工厂里的流水线，里面有不同的加工环节（也就是渲染段），可以根据用户需求对每个环节灵活改造或拆卸（可编程流水线，程序员可在不司的着色器中编写自定义的函数，早期均为定功能流水线，后加入可编程处理器予以实现。以及开启或禁用某些渲染阶段，如曲面细分阶段与几何着色器阶段等）以此把原始材料CPU端向GPU端提交的纹理等资源以及指令等）加工为成品出售给消费者（在GPU端，资源流经流水线里的各个阶段，经指令的调度对其进行处理，最终计算出像素的颜色，将其呈现在用户屏幕上）。-->
+<!--事实上，渲染流水线是种模型，将3D场景变换至2D场景的理流程抽象分离为不同的流水线介段，供用户使用。其本质即指令从CPU端的应用程序层发送至 Direct3D运行时、驱动层及至GPU端（包括二者间的通信，连接都靠PCe接口，实质上就是这种总线传递数据），资源数据在内存与显存间游走，最后是GPU内部各种引擎、缓存、命令队列等根据指令配合运作将数据转化为显示器可视信号。-->
+<p><img src="C:\Users\hp\AppData\Roaming\Typora\typora-user-images\image-20210801151904735.png" alt="渲染流水线(rendering pipeline)"></p>
+<h2 id="1-输入装配器阶段"><a href="#1-输入装配器阶段" class="headerlink" title="1.输入装配器阶段"></a>1.输入装配器阶段</h2><p>输入装配器（ Input Assembler，IA）阶段会从显存中读取几何数据（顶点和索引， vertex and index），再将它们装配为几何图元（ geometric primitive，亦译作几何基元，如三角形和践条这种构成图形的基本元素）。简单来说，是通过索引来定义如何将顶点装配在一起，从而构成图元的方法。</p>
+<p>在 Direct3D中，我们要通过一种名为顶点缓冲区（ vertex buffer）的特殊数据结构，将顶点与渲染流水线相绑定。顶点缓冲区利用连续的内存来存储一系列顶点。可是，仅凭这一点并不能说明这些顶点究竟如何组成几何图元。对此要通过指定图元拓扑（ primitive topology）来告知 Direct3D如何用顶点数据来表示几何图元。</p>
+<h2 id="2-顶点着色器阶段"><a href="#2-顶点着色器阶段" class="headerlink" title="2.顶点着色器阶段"></a>2.顶点着色器阶段</h2><p>待图元被装配完毕后，其顶点就会被送入顶点着色器阶段（ vertex shader stage，简记作VS）。把顶点着色器看作一种输入与输出数据皆为单个顶点的函数。每个要被绘制的顶点都须经过顶点着色器的处理再送往后续阶段。事实上，我们可以认为在硬件中执行的是下列处理过程</p>
+<p>for （UINT i =0， i&lt; numVertices; ++1）<br>      outputvertex[i] = VertexShader（ inputVertex[i]）;</p>
+<p>其中的顶点着色器函数（ Vertexshader）就是我们要实现的那一部分，因为在这一阶段中对顶点的操作实际是由GPU来执行的，所以速度很快, 可以利用顶点着色器来实现许多特效，例如变换、光照和位移贴图（ displacement mapping，也译作置换贴图）。请牢记: 在顶点着色器中，不但可以访问输入的顶点数据，也能够访问纹理和其他存于显存中的数据（如变换矩阵与场景的光照信息）。</p>
+<p>世界空间(世界矩阵) ，观察空间(观察矩阵)  ， 齐次裁剪空间(透视投影矩阵)</p>
+<h2 id="3-曲面细分阶段"><a href="#3-曲面细分阶段" class="headerlink" title="3.曲面细分阶段"></a>3.曲面细分阶段</h2><p>曲面细分阶段（ tessellation stages）是利用镶嵌化处理技术对网格中的三角形进行细分（ subdivide），以此来增加物体表面上的三角形数量。再将这些新增的三角形偏移到适当的位置，使网格表现出更加细腻的细节。</p>
+<p>使用曲面细分的优点有以下几方面:</p>
+<p>1.我们能借此实现一种细节层次（ level- of-detail，LOD）机制，使离虚拟摄像机较近的三角形经镶嵌化处理得到更加丰富的细节，而对距摄像机较远的三角形不进行任何更改。通过这种方式，即可只针对用户关注度高的部分网格增添三角形，从而提升其细节效果。</p>
+<p>2.我们在内存中仅维护简单的低模（ low-poly，低精度模型，也有译作低面多边形、低面片等）网格（低模网格是指三角形数量较少的网格，已逐渐形成一门独特画风的艺术制作手段），再根据需求为它动态地增添额外的三角形，以此节省内存资源</p>
+<p>3.我们可以在处理动画和物理模拟之时采用简单的低模网格，而仅在渲染的过程中使用经镶嵌化处理的高模（high-poly，与低模对应）网格。</p>
+<h2 id="4-几何着色器阶段"><a href="#4-几何着色器阶段" class="headerlink" title="4.几何着色器阶段"></a>4.几何着色器阶段</h2><p>几何着色器（ geometry shader stage，GS）是一个可选渲染阶段，几何着色器接受的输入应当是完整的图元。例如，假设我们正在绘制三角形列表，那么向几何着色器传入的将是定义三角形的3个顶点（注意，这3个顶点在此之前已经过了顶点着色器阶段的处理）几何着色器的主要优点是可以创建或销毁几何体。比如说，我们可以利用几何着色器将输入的图元拓展为一个或多个其他图元，抑或根据某些条件而选择不输出任何图元。</p>
+<p>顶点着色器与之相比，则不能创建顶点; 它只能接受输入的单个顶点，经处理后再将该顶点输出。几何着色器的常见拿手好戏是将一个点或一条线扩展为一个四边形。</p>
+<h2 id="5-裁剪"><a href="#5-裁剪" class="headerlink" title="5.裁剪"></a>5.裁剪</h2><p>完全位于视锥体（ viewing frustum，用户在3D空间中的可视范围形如平截头体）之外的几何体需要被丢弃，而处于平截头体交界以外的几何体部分也一定要接受被裁剪（clip）的操作。因此，只有在平截头体之内的物体对象才会最终保留下来。只要确定了视锥体在齐次空间内的平面方程，就可运用裁剪算法，一种比较流行的裁剪方法: Sutherland-Hodgman clipping, 其整体思路是找到平面与多边形的所有交点，并将这些顶点按顺序组织成新的裁剪多边形。</p>
+<h2 id="光栅化阶段"><a href="#光栅化阶段" class="headerlink" title="光栅化阶段"></a>光栅化阶段</h2><p>光栅化阶段（ rasterization stage，RS）的主要任务是为投影主屏幕上的3D三角形计算出对应的像素颜色。</p>
+<h2 id="像素着色器阶段"><a href="#像素着色器阶段" class="headerlink" title="像素着色器阶段"></a>像素着色器阶段</h2><p>我们编写的像素着色器（ pixel shader，PS）是一种由GPU来执行的程序。它会针对每一个像素片段（ pixel fragment，亦有译作片元）进行处理（即每处理一个像素就要执行一次像素着色器），并根据顶点的插值属性作为输入来计算出对应的像素颜色。像素着色器既可以直接返回一种单一的恒定颜色，也可以实现如逐像素光照（ per-pixel lighting）反射（ reflection）以及阴影（ shadow）等更为复杂的效果。</p>
+<h2 id="输出合并阶段"><a href="#输出合并阶段" class="headerlink" title="输出合并阶段"></a>输出合并阶段</h2><p>通过像素着色器生成的像素片段会被移送至渲染流水线的输出合并（ Output Merger，OM）阶段。在此阶段中，一些像素片段可能会被丢弃（例如，那些未通过深度缓冲区测试或模板缓冲区测试的像素片段）。而后，剩下的像素片段将会被写入后台缓冲区中。混合（bend，也有译作融合）操作也是在此阶段实现的，此技术可令当前处理的像素与后台缓冲区中的对应像素相融合，而不仅是对后者进行完全的覆写。一些如“透明”这样的特殊效果，也是由混合技术来实现的。</p>
 <p><img src="/img/xkcd/interest_timescales.png" alt="尺度!?"> </p>
 
                 
@@ -532,7 +526,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://zdszx.github.io/2021/07/25/Python/">http://zdszx.github.io/2021/07/25/Python/</a>
+                    <a href="http://zdszx.github.io/2021/07/29/RenderPipe/">http://zdszx.github.io/2021/07/29/RenderPipe/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -570,8 +564,8 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/python/">
-                                    <span class="chip bg-color">python</span>
+                                <a href="/tags/DX11-pipeline/">
+                                    <span class="chip bg-color">DX11 pipeline</span>
                                 </a>
                             
                         </div>
@@ -614,9 +608,10 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
                 <a href="/2021/07/29/RenderPipe/">
                     <div class="card-image">
@@ -634,9 +629,9 @@
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-07-29
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-07-29
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -649,6 +644,7 @@
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -667,13 +663,13 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2021/07/03/H264/">
+                <a href="/2021/07/25/Python/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/5.jpg" class="responsive-img" alt="H.264简介">
+                        <img src="/medias/featureimages/7.jpg" class="responsive-img" alt="Python3">
                         
-                        <span class="card-title">H.264简介</span>
+                        <span class="card-title">Python3</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -684,14 +680,14 @@
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-07-03
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-07-25
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E9%9F%B3%E8%A7%86%E9%A2%91/" class="post-category">
-                                    音视频
+                            <a href="/categories/python/" class="post-category">
+                                    python
                                 </a>
                             
                             
@@ -701,8 +697,8 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/H264/">
-                        <span class="chip bg-color">H264</span>
+                    <a href="/tags/python/">
+                        <span class="chip bg-color">python</span>
                     </a>
                     
                 </div>
