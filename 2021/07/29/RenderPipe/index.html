@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Python3, zdszx&#39;s blog">
+    <meta name="keywords" content="渲染流水线, zdszx&#39;s blog">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>Python3 | zdszx&#39;s blog</title>
+    <title>渲染流水线 | zdszx&#39;s blog</title>
     <link rel="icon" type="image/jpeg" href="/favicon.jpg">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -310,12 +310,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/7.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/3.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">Python3</h1>
+                    <h1 class="description center-align post-title">渲染流水线</h1>
                 </div>
             </div>
         </div>
@@ -496,10 +496,10 @@
 <h2 id="4-几何着色器阶段"><a href="#4-几何着色器阶段" class="headerlink" title="4.几何着色器阶段"></a>4.几何着色器阶段</h2><p>几何着色器（ geometry shader stage，GS）是一个可选渲染阶段，几何着色器接受的输入应当是完整的图元。例如，假设我们正在绘制三角形列表，那么向几何着色器传入的将是定义三角形的3个顶点（注意，这3个顶点在此之前已经过了顶点着色器阶段的处理）几何着色器的主要优点是可以创建或销毁几何体。比如说，我们可以利用几何着色器将输入的图元拓展为一个或多个其他图元，抑或根据某些条件而选择不输出任何图元。</p>
 <p>顶点着色器与之相比，则不能创建顶点; 它只能接受输入的单个顶点，经处理后再将该顶点输出。几何着色器的常见拿手好戏是将一个点或一条线扩展为一个四边形。</p>
 <h2 id="5-裁剪"><a href="#5-裁剪" class="headerlink" title="5.裁剪"></a>5.裁剪</h2><p>完全位于视锥体（ viewing frustum，用户在3D空间中的可视范围形如平截头体）之外的几何体需要被丢弃，而处于平截头体交界以外的几何体部分也一定要接受被裁剪（clip）的操作。因此，只有在平截头体之内的物体对象才会最终保留下来。只要确定了视锥体在齐次空间内的平面方程，就可运用裁剪算法，一种比较流行的裁剪方法: Sutherland-Hodgman clipping, 其整体思路是找到平面与多边形的所有交点，并将这些顶点按顺序组织成新的裁剪多边形。</p>
-<h2 id="光栅化阶段"><a href="#光栅化阶段" class="headerlink" title="光栅化阶段"></a>光栅化阶段</h2><p>光栅化阶段（ rasterization stage，RS）的主要任务是为投影主屏幕上的3D三角形计算出对应的像素颜色。</p>
-<h2 id="像素着色器阶段"><a href="#像素着色器阶段" class="headerlink" title="像素着色器阶段"></a>像素着色器阶段</h2><p>我们编写的像素着色器（ pixel shader，PS）是一种由GPU来执行的程序。它会针对每一个像素片段（ pixel fragment，亦有译作片元）进行处理（即每处理一个像素就要执行一次像素着色器），并根据顶点的插值属性作为输入来计算出对应的像素颜色。像素着色器既可以直接返回一种单一的恒定颜色，也可以实现如逐像素光照（ per-pixel lighting）反射（ reflection）以及阴影（ shadow）等更为复杂的效果。</p>
-<h2 id="输出合并阶段"><a href="#输出合并阶段" class="headerlink" title="输出合并阶段"></a>输出合并阶段</h2><p>通过像素着色器生成的像素片段会被移送至渲染流水线的输出合并（ Output Merger，OM）阶段。在此阶段中，一些像素片段可能会被丢弃（例如，那些未通过深度缓冲区测试或模板缓冲区测试的像素片段）。而后，剩下的像素片段将会被写入后台缓冲区中。混合（bend，也有译作融合）操作也是在此阶段实现的，此技术可令当前处理的像素与后台缓冲区中的对应像素相融合，而不仅是对后者进行完全的覆写。一些如“透明”这样的特殊效果，也是由混合技术来实现的。</p>
-<p><img src="/img/xkcd/repairs.png" alt="尺度!?"> </p>
+<h2 id="6-光栅化阶段"><a href="#6-光栅化阶段" class="headerlink" title="6.光栅化阶段"></a>6.光栅化阶段</h2><p>光栅化阶段（ rasterization stage，RS）的主要任务是为投影主屏幕上的3D三角形计算出对应的像素颜色。</p>
+<h2 id="7-像素着色器阶段"><a href="#7-像素着色器阶段" class="headerlink" title="7.像素着色器阶段"></a>7.像素着色器阶段</h2><p>我们编写的像素着色器（ pixel shader，PS）是一种由GPU来执行的程序。它会针对每一个像素片段（ pixel fragment，亦有译作片元）进行处理（即每处理一个像素就要执行一次像素着色器），并根据顶点的插值属性作为输入来计算出对应的像素颜色。像素着色器既可以直接返回一种单一的恒定颜色，也可以实现如逐像素光照（ per-pixel lighting）反射（ reflection）以及阴影（ shadow）等更为复杂的效果。</p>
+<h2 id="8-输出合并阶段"><a href="#8-输出合并阶段" class="headerlink" title="8.输出合并阶段"></a>8.输出合并阶段</h2><p>通过像素着色器生成的像素片段会被移送至渲染流水线的输出合并（ Output Merger，OM）阶段。在此阶段中，一些像素片段可能会被丢弃（例如，那些未通过深度缓冲区测试或模板缓冲区测试的像素片段）。而后，剩下的像素片段将会被写入后台缓冲区中。混合（bend，也有译作融合）操作也是在此阶段实现的，此技术可令当前处理的像素与后台缓冲区中的对应像素相融合，而不仅是对后者进行完全的覆写。一些如“透明”这样的特殊效果，也是由混合技术来实现的。</p>
+<p><img src="/img/xkcd/repairs.png" alt="我是如何修东西的"> </p>
 
                 
             </div>
@@ -617,9 +617,9 @@
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/7.jpg" class="responsive-img" alt="Python3">
+                        <img src="/medias/featureimages/3.jpg" class="responsive-img" alt="渲染流水线">
                         
-                        <span class="card-title">Python3</span>
+                        <span class="card-title">渲染流水线</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
