@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Python3, zdszx&#39;s blog">
+    <meta name="keywords" content="YUV RGB, zdszx&#39;s blog">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>Python3 | zdszx&#39;s blog</title>
+    <title>YUV RGB | zdszx&#39;s blog</title>
     <link rel="icon" type="image/jpeg" href="/favicon.jpg">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -310,12 +310,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/7.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/9.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">Python3</h1>
+                    <h1 class="description center-align post-title">YUV RGB</h1>
                 </div>
             </div>
         </div>
@@ -431,8 +431,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/python/">
-                                <span class="chip bg-color">python</span>
+                            <a href="/tags/YUV/">
+                                <span class="chip bg-color">YUV</span>
                             </a>
                         
                     </div>
@@ -443,8 +443,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/python/" class="post-category">
-                                python
+                            <a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9B%BE%E5%BD%A2%E5%AD%A6/" class="post-category">
+                                计算机图形学
                             </a>
                         
                     </div>
@@ -456,7 +456,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-07-25
+                    2021-07-29
                 </div>
                 
 
@@ -477,35 +477,29 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h3 id="Python元类"><a href="#Python元类" class="headerlink" title="Python元类"></a>Python元类</h3><p>Python中的所有内容都可以定义为具有属性和方法的对象。</p>
-<p><img src="/img/metaclass1.png" alt="metaclass"> </p>
-<p>一个简单的类在声明时没有分配任何内存，它是在创建一个类的实例时发生的。</p>
-<p>通过创建的对象，可以访问该类。该类仅用作模板。对象的属性本质上意味着我们可以在运行时与它进行交互，传递诸如变量之类的参数，进行存储，修改，也可以与它进行交互。</p>
-<p><img src="/img/metaclass2.png" alt="metaclass"> </p>
-<p>Python是一种动态编程语言，并允许在运行时创建类。与C ++等其他语言不同，后者仅允许在编译时创建类。在灵活性方面，Python优于其他静态类型的语言。</p>
-<p>可以通过两种方法创建元类：1.类型类;  2. 自定义元类:  </p>
-<p>2.1 <strong>new </strong>（）：当用户要在类创建之前定义元组字典时使用。它返回一个类的实例，并且很容易覆盖/管理对象流</p>
-<p>2.2 <strong>init </strong>（）：在创建对象并对其进行初始化之后调用它;</p>
-<h3 id="Python静态方法和类方法的区别"><a href="#Python静态方法和类方法的区别" class="headerlink" title="Python静态方法和类方法的区别"></a>Python静态方法和类方法的区别</h3><p>类方法和静态方法的区别在于，Python会自动绑定类方法的第一个参数，类方法的第一个参数（通常建议参数名为 cls）会自动绑定到类本身；但对于静态方法则不会自动绑定。</p>
-<p>类方法采用装饰器@classmethod来定义</p>
-<p>静态方法使用装饰器@staticmethod来定义一个静态方法。</p>
-<h3 id="py字典底层设计"><a href="#py字典底层设计" class="headerlink" title="py字典底层设计"></a>py字典底层设计</h3><p>字典是通过散列表或说哈希表实现的</p>
-<p>其本质是一个多对一的映射，这也就引出了下面一个概念–哈希冲突或者说哈希碰撞</p>
-<p>常见的哈希碰撞解决方法：</p>
-<p>1 开放寻址法（open addressing）</p>
-<p>2 再哈希法</p>
-<p>3 链地址法</p>
-<p>4 公共溢出区</p>
-<p>5 装填因子α</p>
-<h3 id="set的底层数据结构是什么？set和dict的区别"><a href="#set的底层数据结构是什么？set和dict的区别" class="headerlink" title="set的底层数据结构是什么？set和dict的区别"></a>set的底层数据结构是什么？set和dict的区别</h3><p>（1）dict是用来存储键值对结构的数据的，set其实也是存储的键值对，只是默认键和值是相同的。Python中的dict和set都是通过散列表来实现的。</p>
-<p>（2）dict中的数据是无序存放的,操作的时间复杂度，插入、查找和删除都可以在O(1)的时间复杂度键的限制，只有可哈希的对象才能作为字典的键和set的值。可hash的对象即python中的不可变对象和自定义的对象。可变对象(列表、字典、集合)是不能作为dict的键和set的值的。与list相比：list的查找和删除的时间复杂度是O(n)，添加的时间复杂度是O(1)。但是dict使用hashtable内存的开销更大。为了保证较少的冲突，hashtable的装载因子，一般要小于0.75，在python中当装载因子达到2/3的时候就会自动进行扩容</p>
-<h3 id="list和tuple的底层数据结构是什么？"><a href="#list和tuple的底层数据结构是什么？" class="headerlink" title="list和tuple的底层数据结构是什么？"></a>list和tuple的底层数据结构是什么？</h3><p>python的list和tuple，均采用了顺序表的结构。Tuple不支持改变内部状态的操作。（1）顺序表：将表元素直接顺序的放在一块划分的连续存储区内，所以元素的顺序关系由存储顺序自然表示。链接表：将表元素放在通过链接构造起来的系列存储块里。两种模型各有长短。插入和删除的时间复杂度为O(n)，增加的时间复杂度为O(1)<br>（2）在存储dict的时候，首先会根据dict的key进行hash映射到对应的表元，然后再对应的表元中开辟内存，存入数据，当如果存在不同的两个key的hash结果相同的时候，就会使用散列值的另一部分来定位散列表中的另一行。在查找指定key时，会先计算key的散列值，然后使用散列值的一部分来定位表元，如果没有找到相应的表元，则说明dict中不存在对应的key跑出KeyError异常。如果找到表元之后，会判断表元中的key是否和要查找的key相等，相等就返回对应值，如果不相等则使用其对应的散列值的其他部分来定位散列表中的其他行。</p>
-<h4 id="py上下文管理器设计"><a href="#py上下文管理器设计" class="headerlink" title="py上下文管理器设计"></a>py上下文管理器设计</h4><p>上下文管理器，能够帮助你自动分配并且释放资源，其中最典型的应用便是 with 语句</p>
-<h4 id="如何去实现一个迭代器的功能？"><a href="#如何去实现一个迭代器的功能？" class="headerlink" title="如何去实现一个迭代器的功能？"></a>如何去实现一个迭代器的功能？</h4><p>答：实现一个迭代器，只需要实现_next__方法就行了。如果实现一个可迭代对象，实现<strong>iter</strong>方法就可以了。</p>
-<h4 id="yield和yield-from有何区别？"><a href="#yield和yield-from有何区别？" class="headerlink" title="yield和yield from有何区别？"></a>yield和yield from有何区别？</h4><p>yield是直接返回值，yield from调用子生成器进行迭代那个可迭代对象。比如yield一个列表，那么next(g）就是整个列表，而如果yield from 列表，next(g)得到的就是一个子元素</p>
-<h4 id="py深浅复制"><a href="#py深浅复制" class="headerlink" title="py深浅复制"></a>py深浅复制</h4><p>在修改时不想修改原对象，那么可以用深拷贝弄一个新的内存对象采用</p>
-<h4 id="python多继承的顺序"><a href="#python多继承的顺序" class="headerlink" title="python多继承的顺序"></a>python多继承的顺序</h4><p>自下而上，自左而右。</p>
-<p><img src="/img/xkcd/interest_timescales.png" alt="尺度!?"> </p>
+                <h1 id="YUV-RGB"><a href="#YUV-RGB" class="headerlink" title="YUV RGB"></a>YUV RGB</h1><h3 id="YUV"><a href="#YUV" class="headerlink" title="YUV"></a>YUV</h3><p>Y表示明亮度（Luminance或Luma），也就是灰阶值，U和V表示的则是色度（Chrominance或Chroma）</p>
+<p>planar: 先存储 Y，然后 U，然后 V。</p>
+<p>Eg:  YUV420p   Y1Y2Y3Y4Y5Y6Y7Y8 U1U2 V1V2</p>
+<p>packed: yuv 交叉存储。</p>
+<p>Eg:    NV12       Y1Y2Y3Y4Y5Y6Y7Y8 U1V1 U2V2</p>
+<p>​          NV21       Y1Y2Y3Y4Y5Y6Y7Y8 V1U1 V2U2</p>
+<p>YV12、YU12（属于YUV420 Planar）</p>
+<p>NV12、NV21（属于YUV420 Semi-Planar）</p>
+<p>P010、P016（属于YUV420 Semi-Planar）</p>
+<p>P010格式每个分量占10bit，P016每个分量占16bit，NV12每个分量占8bit，其不同处仅在于只是Y、U、V所占bit数不同。</p>
+<p>Y210、Y216（属于YUV422 Packed）</p>
+<p>Y410、Y416（属于YUV444 Packed）同理，Y410是10bit的，Y416是16bit的</p>
+<h3 id="RGB"><a href="#RGB" class="headerlink" title="RGB"></a>RGB</h3><p>是一种加色模型，将红（Red）、绿（Green）、蓝（Blue）三原色的色光以不同的比例相加，以产生多种多样的色光；且三原色的红绿蓝不可能用其他单色光合成。<br>浮点表示方式： 取值范围为 0.0 ~ 1.0（如在 OpenGL 中对每个子像素点的表示就是使用这个表示方式）。<br>整数表示： 取值范围为 0 ~ 255 或者 00 ~ FF（如 RGBA_8888、RGB_565）。</p>
+<h3 id="YUV-lt-——-gt-RGB"><a href="#YUV-lt-——-gt-RGB" class="headerlink" title="\YUV &lt;——&gt; RGB**"></a><strong><em>\</em>YUV &lt;——&gt; RGB**</strong></h3><p>当转换为 RGB 读取 YUV 时，需要将 U(Cb)、V(Cr) 的取值范围整数表示时，转换为：[-128, 127]；浮点数表示时，转换为：[-0.5, 0.5]</p>
+<p>算法优化  常规转换：浮点运算</p>
+<p>优化1：避免浮点运算</p>
+<p>同时对表达式中所有子项乘以 256 来对结果进行四舍五入作为新的整数系数，最后再对计算结果再右移 8 位（除以 256）(注意：这里的转换是有损的，精度会有所降低）</p>
+<p>优化2：避免乘法运算</p>
+<p>将所有表达式中的子项系数，拆解成整数（该整数必需是 2 的次幂，这样可以使用位移运算）相加的形式。</p>
+<p>优化3：查表</p>
+<p>在常规转换表达式中，变量的取值范围是已经确定，Y：[0, 255]，U：[-128, 127]，V：[-128, 127]；那么就可以使用一维数组存储结果来提高效率。</p>
+<p>将表达式中相关的变量计算结果分别存储在 4 个一位数组中，在使用计算时，直接通过数组查询即可获得表达式相乘结果。</p>
+<p><a target="_blank" rel="noopener" href="https://github.com/shenyuanluo/SYKit/tree/master/SYKit/SYConverter">https://github.com/shenyuanluo/SYKit/tree/master/SYKit/SYConverter</a></p>
 
                 
             </div>
@@ -532,7 +526,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://zdszx.github.io/2021/07/25/Python/">http://zdszx.github.io/2021/07/25/Python/</a>
+                    <a href="http://zdszx.github.io/2021/07/29/YUV/">http://zdszx.github.io/2021/07/29/YUV/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -570,8 +564,8 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/python/">
-                                    <span class="chip bg-color">python</span>
+                                <a href="/tags/YUV/">
+                                    <span class="chip bg-color">YUV</span>
                                 </a>
                             
                         </div>
@@ -618,13 +612,13 @@
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2021/07/29/YUV/">
+                <a href="/2021/07/29/RenderPipe/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/9.jpg" class="responsive-img" alt="YUV RGB">
+                        <img src="/medias/featureimages/3.jpg" class="responsive-img" alt="渲染流水线">
                         
-                        <span class="card-title">YUV RGB</span>
+                        <span class="card-title">渲染流水线</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -652,8 +646,8 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/YUV/">
-                        <span class="chip bg-color">YUV</span>
+                    <a href="/tags/DX11-pipeline/">
+                        <span class="chip bg-color">DX11 pipeline</span>
                     </a>
                     
                 </div>
@@ -667,13 +661,13 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2021/07/03/H264/">
+                <a href="/2021/07/25/Python/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/5.jpg" class="responsive-img" alt="H.264简介">
+                        <img src="/medias/featureimages/7.jpg" class="responsive-img" alt="Python3">
                         
-                        <span class="card-title">H.264简介</span>
+                        <span class="card-title">Python3</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -684,14 +678,14 @@
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-07-03
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-07-25
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E9%9F%B3%E8%A7%86%E9%A2%91/" class="post-category">
-                                    音视频
+                            <a href="/categories/python/" class="post-category">
+                                    python
                                 </a>
                             
                             
@@ -701,8 +695,8 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/H264/">
-                        <span class="chip bg-color">H264</span>
+                    <a href="/tags/python/">
+                        <span class="chip bg-color">python</span>
                     </a>
                     
                 </div>

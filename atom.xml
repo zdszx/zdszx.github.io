@@ -37,6 +37,31 @@
   </entry>
   
   <entry>
+    <title>YUV RGB</title>
+    <link href="http://zdszx.github.io/2021/07/29/YUV/"/>
+    <id>http://zdszx.github.io/2021/07/29/YUV/</id>
+    <published>2021-07-29T02:00:58.000Z</published>
+    <updated>2021-08-01T13:58:23.659Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="YUV-RGB"><a href="#YUV-RGB" class="headerlink" title="YUV RGB"></a>YUV RGB</h1><h3 id="YUV"><a href="#YUV" class="headerlink" title="YUV"></a>YUV</h3><p>Y表示明亮度（Luminance或Luma），也就是灰阶值，U和V表示的则是色度（Chrominance或Chroma）</p><p>planar: 先存储 Y，然后 U，然后 V。</p><p>Eg:  YUV420p   Y1Y2Y3Y4Y5Y6Y7Y8 U1U2 V1V2</p><p>packed: yuv 交叉存储。</p><p>Eg:    NV12       Y1Y2Y3Y4Y5Y6Y7Y8 U1V1 U2V2</p><p>​          NV21       Y1Y2Y3Y4Y5Y6Y7Y8 V1U1 V2U2</p><p>YV12、YU12（属于YUV420 Planar）</p><p>NV12、NV21（属于YUV420 Semi-Planar）</p><p>P010、P016（属于YUV420 Semi-Planar）</p><p>P010格式每个分量占10bit，P016每个分量占16bit，NV12每个分量占8bit，其不同处仅在于只是Y、U、V所占bit数不同。</p><p>Y210、Y216（属于YUV422 Packed）</p><p>Y410、Y416（属于YUV444 Packed）同理，Y410是10bit的，Y416是16bit的</p><h3 id="RGB"><a href="#RGB" class="headerlink" title="RGB"></a>RGB</h3><p>是一种加色模型，将红（Red）、绿（Green）、蓝（Blue）三原色的色光以不同的比例相加，以产生多种多样的色光；且三原色的红绿蓝不可能用其他单色光合成。<br>浮点表示方式： 取值范围为 0.0 ~ 1.0（如在 OpenGL 中对每个子像素点的表示就是使用这个表示方式）。<br>整数表示： 取值范围为 0 ~ 255 或者 00 ~ FF（如 RGBA_8888、RGB_565）。</p><h3 id="YUV-lt-——-gt-RGB"><a href="#YUV-lt-——-gt-RGB" class="headerlink" title="\YUV &lt;——&gt; RGB**"></a><strong><em>\</em>YUV &lt;——&gt; RGB**</strong></h3><p>当转换为 RGB 读取 YUV 时，需要将 U(Cb)、V(Cr) 的取值范围整数表示时，转换为：[-128, 127]；浮点数表示时，转换为：[-0.5, 0.5]</p><p>算法优化  常规转换：浮点运算</p><p>优化1：避免浮点运算</p><p>同时对表达式中所有子项乘以 256 来对结果进行四舍五入作为新的整数系数，最后再对计算结果再右移 8 位（除以 256）(注意：这里的转换是有损的，精度会有所降低）</p><p>优化2：避免乘法运算</p><p>将所有表达式中的子项系数，拆解成整数（该整数必需是 2 的次幂，这样可以使用位移运算）相加的形式。</p><p>优化3：查表</p><p>在常规转换表达式中，变量的取值范围是已经确定，Y：[0, 255]，U：[-128, 127]，V：[-128, 127]；那么就可以使用一维数组存储结果来提高效率。</p><p>将表达式中相关的变量计算结果分别存储在 4 个一位数组中，在使用计算时，直接通过数组查询即可获得表达式相乘结果。</p><p><a href="https://github.com/shenyuanluo/SYKit/tree/master/SYKit/SYConverter">https://github.com/shenyuanluo/SYKit/tree/master/SYKit/SYConverter</a></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;YUV-RGB&quot;&gt;&lt;a href=&quot;#YUV-RGB&quot; class=&quot;headerlink&quot; title=&quot;YUV RGB&quot;&gt;&lt;/a&gt;YUV RGB&lt;/h1&gt;&lt;h3 id=&quot;YUV&quot;&gt;&lt;a href=&quot;#YUV&quot; class=&quot;headerlink&quot; title=
+      
+    
+    </summary>
+    
+      <category term="计算机图形学" scheme="http://zdszx.github.io/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9B%BE%E5%BD%A2%E5%AD%A6/"/>
+    
+    
+      <category term="YUV" scheme="http://zdszx.github.io/tags/YUV/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Python3</title>
     <link href="http://zdszx.github.io/2021/07/25/Python/"/>
     <id>http://zdszx.github.io/2021/07/25/Python/</id>
